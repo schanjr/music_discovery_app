@@ -58,7 +58,7 @@ class LastFM {
                 name: track.name,
                 duration: track.duration,
                 url: track.url
-            }))]
+            }))][0] ?? {}
         })
     }
 

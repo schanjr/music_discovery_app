@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import ArtistAlbumSearchbar from "../components/ArtistAlbumSearchbar";
+import ArtistAlbumSearchbar from "src/components/ArtistAlbumSearchbar";
 import {useDispatch} from 'react-redux';
-import lastFM from "../providers/lastFM/lastFM";
-import {setAlbums} from '../store/albumSlice';
+import lastFM from "src/providers/lastFM/lastFM";
+import {setAlbums} from 'src/store/albumSlice';
 import {useNavigate} from 'react-router-dom';
 import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
-import theme from '../styles/theme';
-import {encodePathString} from "../utils/handleUrls";
+import theme from 'src/styles/theme';
+import {encodePathString} from "src/utils/handleUrls";
 
 
 const ArtistsView: React.FC = () => {

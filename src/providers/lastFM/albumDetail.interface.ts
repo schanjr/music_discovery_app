@@ -11,7 +11,7 @@ interface AlbumDetail {
     listeners: number;
     summary: string;
     playCount: number;
-    tracks?: Track[];
+    tracks: Track[]
 }
 
 export default AlbumDetail

@@ -7,6 +7,7 @@ import ArtistAlbums from "./views/ArtistAlbums/ArtistAlbums";
 import AlbumDetails from "./views/AlbumDetails/AlbumDetails";
 import Artists from "./views/Artists";
 import Favorites from "./views/Favorites/Favorites";
+import ThreeD from "./views/ThreeD/ThreeD";
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/artists" element={<Artists/>}/>
                 <Route path="/artists/:artistId/albums" element={<ArtistAlbums/>}/>
                 <Route path="/artists/:artistId/albums/:albumId" element={<AlbumDetails/>}/>
+                <Route path="/test" element={<ThreeD/>}/>
             </Routes>
         </BrowserRouter>
     );

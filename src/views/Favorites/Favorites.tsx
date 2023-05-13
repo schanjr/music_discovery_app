@@ -13,7 +13,7 @@ import {
     Button,
 } from '@material-ui/core';
 import {FavoriteType, removeFromFavorites} from "../../store/favoritesSlice";
-import {encodePathString} from "../../utils/handleUrls";
+import {encodePathString} from "src/utils/handleUrls";
 
 const useStyles = makeStyles((theme) => ({
     root: {

@@ -1,31 +1,27 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
-    "paths": {
-      "*": [
-        "src/*"
-      ]
-    },
-    "target": "es6",
-    "module": "esnext",
+    "baseUrl": ".",
+    "paths": {}, //breaks import {counter} from "src/useReducer/counter";
+//    "target": "es6",
+//    "module": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "es2019"
     ],
     "allowJs": true,
     "jsx": "react-jsx",
-    "sourceMap": true,
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+//    "sourceMap": true,
+//    "outDir": "./dist/",
+//    "noImplicitAny": true,
+//    "resolveJsonModule": true,
     "esModuleInterop": true,
     "strict": true,
-    "include": [
-      "custom.d.ts",
-      "./src/*/**",
-      "src"
-    ]
+//    "include": [
+//      "custom.d.ts",
+//      "./src/**/*",
+//      "node_modules/**/*.d.ts"
+////      "src"
+//    ]
   }
 }

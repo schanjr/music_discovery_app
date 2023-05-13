@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
-import {RootState} from "../../store/rootReducer";
-import {addToFavorites, FavoriteType, removeFromFavorites} from "../../store/favoritesSlice";
+import {RootState} from 'src/store/store';
+import {addToFavorites, FavoriteType, removeFromFavorites} from "src/store/favoritesSlice";
 
 import {Typography, Avatar, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Link, IconButton} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {red} from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import AlbumDetail, {Track} from "../../providers/lastFM/albumDetail.interface";
+import AlbumDetail, {Track} from "src/providers/lastFM/albumDetail.interface";
 
 const useStyles = makeStyles({
     albumImage: {
@@ -77,7 +77,7 @@ const AlbumDetailsView: React.FC = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {albumDetails?.tracks[0]?.map((track: Track) => (
+                        {albumDetails && albumDetails.tracks && albumDetails.tracks && albumDetails.tracks.map((track: Track) => (
                             <TableRow key={track.url}>
                                 <TableCell>
                                     <Link href={track.url} target="_blank" rel="noreferrer" color={"textSecondary"}>

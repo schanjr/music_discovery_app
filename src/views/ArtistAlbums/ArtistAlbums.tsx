@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../store/rootReducer';
-import Album from "../../providers/lastFM/album.interface";
+import { RootState } from "../../store/store";
+import Album from "src/providers/lastFM/album.interface";
 import { makeStyles } from '@material-ui/core/styles';
-import LastFM from "../../providers/lastFM/lastFM";
+import LastFM from "src/providers/lastFM/lastFM";
 import {
     Table,
     TableBody,
