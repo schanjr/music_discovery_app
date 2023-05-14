@@ -7,15 +7,17 @@ import ArtistAlbums from "./views/ArtistAlbums/ArtistAlbums";
 import AlbumDetails from "./views/AlbumDetails/AlbumDetails";
 import Artists from "./views/Artists";
 import Favorites from "./views/Favorites/Favorites";
-import ThreeD from "./views/ThreeD/ThreeD";
+import ThreeD from "./views/ThreeD";
+import CassetteShow from "./views/CassetteShow/CassetteShow"
 import './App.css'
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="*" element={<Navigate to="/"/>}/>
+                <Route path="/" element={<CassetteShow/>}/>
+                <Route path="/home" element={<Home/>}/>
+                <Route path="*" element={<Navigate to="/home"/>}/>
                 <Route path="/favorites" element={<Favorites/>}/>
                 <Route path="/artists" element={<Artists/>}/>
                 <Route path="/artists/:artistId/albums" element={<ArtistAlbums/>}/>

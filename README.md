@@ -18,7 +18,3 @@
 - [ ] Search by Song name 
 - [ ] Best Played Graph
 
-## Loom Video Demo
-https://www.loom.com/share/fd25990f97e14d84a69a0fa7110686c4 
-
-Couple bugs here and there and felt styling and components could better be compartmentalized if this was going to be in production. 
