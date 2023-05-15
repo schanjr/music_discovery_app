@@ -7,6 +7,7 @@ import {useNavigate} from 'react-router-dom';
 import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import theme from 'src/styles/theme';
 import {encodePathString} from "src/utils/handleUrls";
+import NavigationSideBar from "../components/NavigationSideBar/NavigationSideBar";
 
 
 const ArtistsView: React.FC = () => {
@@ -44,6 +45,7 @@ const ArtistsView: React.FC = () => {
 
     return (
         <ThemeProvider theme={theme}>
+            <NavigationSideBar/>
             <div className={classes.root}>
                 <h1>Search Artists</h1>
                 <br/>

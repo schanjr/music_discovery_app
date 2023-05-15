@@ -18,6 +18,7 @@ import {
 import {useNavigate} from "react-router-dom";
 import {setAlbumDetails} from "../../store/albumDetailsSlice";
 import {encodePathString} from "../../utils/handleUrls";
+import NavigationSideBar from "../../components/NavigationSideBar/NavigationSideBar";
 
 const useStyles = makeStyles({
     table: {
@@ -72,6 +73,7 @@ const ArtistAlbums: React.FC = () => {
 
     return (
         <div>
+            <NavigationSideBar/>
             <TableContainer component={Paper}>
                 <Table className={classes.table}>
                     <TableHead>

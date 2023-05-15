@@ -9,6 +9,7 @@ import {red} from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import AlbumDetail, {Track} from "src/providers/lastFM/albumDetail.interface";
+import NavigationSideBar from "../../components/NavigationSideBar/NavigationSideBar";
 
 const useStyles = makeStyles({
     albumImage: {
@@ -60,6 +61,7 @@ const AlbumDetailsView: React.FC = () => {
 
     return (
         <div>
+            <NavigationSideBar/>
             <Typography variant="h4" color={"textPrimary"}>{albumDetails.name}</Typography>
             <Avatar variant="square" src={albumDetails.image} className={classes.albumImage}/>
             <Typography variant="subtitle1" color={"textPrimary"}>

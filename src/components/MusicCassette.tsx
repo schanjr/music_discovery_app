@@ -21,7 +21,7 @@ export function MusicCassette() {
       }
     });
   }, [gltf]);
-  useFrame((state, delta) => {
+  useFrame(() => {
     if (hovered) {
       gltf.scene.traverse((object) => {
         if (object instanceof Mesh) {
@@ -36,7 +36,6 @@ export function MusicCassette() {
       });
     }
   });
-
   return (
           <primitive
                   // eslint-disable-next-line

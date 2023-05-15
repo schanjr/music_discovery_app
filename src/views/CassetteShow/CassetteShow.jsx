@@ -28,7 +28,7 @@ function CassetteShow() {
             <PerspectiveCamera makeDefault fov={50} position={[3, 3, 3]}/>
             <color args={[0, 0, 0]} attach="background"/>
             <mesh
-                onClick={() => {navigate('/artists')}}>
+                onClick={() => {navigate('/home')}}>
                 <MusicCassette/>
             </mesh>
             <spotLight
