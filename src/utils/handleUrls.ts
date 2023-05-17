@@ -8,5 +8,9 @@ const decodePathString =  (str: string) => {
     return decodeURI(str.replace(/-/g, ' ').replace(/\./, '/'));
 }
 
-export {encodePathString, decodePathString};
+const toAlbumDetailsSliceKey = (artistId = '', artistAlbum = '') => {
+    return encodePathString(`${artistId}--${artistAlbum}`);
+}
+
+export {encodePathString, decodePathString, toAlbumDetailsSliceKey};
 

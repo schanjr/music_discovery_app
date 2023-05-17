@@ -1,36 +1,22 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import AlbumDetailInterface from "../providers/lastFM/albumDetail.interface";
 
+type albumDetailsId = string;
+
 interface AlbumDetailState {
-    albumDetails: AlbumDetailInterface;
+  [id: albumDetailsId]: AlbumDetailInterface;
 }
 
-const initialState: AlbumDetailState = {
-    albumDetails: {
-        name: '',
-        artist: '',
-        image: '',
-        listeners: 0,
-        summary: '',
-        playCount: 0,
-        tracks: [{
-            name: '',
-            duration: 0,
-            url: ''
-        }]
-    },
-};
-
+const initialState: AlbumDetailState = {};
 export const albumDetailsSlice = createSlice({
-    name: 'albumDetails',
-    initialState,
-    reducers: {
-        setAlbumDetails: (state, action: PayloadAction<AlbumDetailInterface>) => {
-            state.albumDetails = action.payload;
-        },
-    },
+  name: 'albumDetails',
+  initialState,
+  reducers: {
+    setAlbumDetails: (state, action: PayloadAction<{ [id: albumDetailsId]: AlbumDetailInterface }>) => {
+      const key = Object.keys(action.payload)[0]
+      state[key] = action.payload[key]
+    }
+  },
 });
-
 export const {setAlbumDetails} = albumDetailsSlice.actions;
-
 export default albumDetailsSlice.reducer;

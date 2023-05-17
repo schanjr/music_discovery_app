@@ -20,6 +20,7 @@ const ArtistsView: React.FC = () => {
         try {
             const api = new lastFM();
             let albums = await api.getArtistTopAlbums(artistName);
+            // Remove unrelated artists that somehow got into the search. LastFM API results are generous.
             albums = albums.filter(album => album.artist.toLowerCase() === artistName.toLowerCase());
             dispatch(setAlbums(albums));
             navigate(`/artists/${encodePathString(artistName)}/albums`);
