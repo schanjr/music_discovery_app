@@ -58,9 +58,9 @@ const AlbumDetailsView: React.FC = () => {
     } else {
       const trackFavorite: FavoriteType = {
         id: trackId,
-        songTitle: track.name,
+        songTitle: track?.name,
         duration: track.duration,
-        album: albumDetails.name,
+        album: albumDetails?.name,
         artist: albumDetails.artist,
         albumImage: albumDetails.image
       }
@@ -72,10 +72,11 @@ const AlbumDetailsView: React.FC = () => {
       });
     }
   }
+  // return stub page when there are no album favorites data stored.
   return (
           <div>
             <NavigationSideBar/>
-            <Typography variant="h4" color={"textPrimary"}>{albumDetails.name}</Typography>
+            <Typography variant="h4" color={"textPrimary"}>{albumDetails?.name}</Typography>
             <Avatar variant="square" src={albumDetails.image} className={classes.albumImage}/>
             <Typography variant="subtitle1" color={"textPrimary"}>
               Listeners: {albumDetails.listeners}
@@ -96,7 +97,7 @@ const AlbumDetailsView: React.FC = () => {
                           <TableRow key={track.url}>
                             <TableCell>
                               <Link href={track.url} target="_blank" rel="noreferrer" color={"textSecondary"}>
-                                {track.name}
+                                {track?.name}
                               </Link>
                             </TableCell>
                             <TableCell>
